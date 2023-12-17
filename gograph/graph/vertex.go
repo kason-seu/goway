@@ -31,7 +31,7 @@ type Vertex interface {
 // BaseVertex is a basic implementation of the Vertex interface.
 type BaseVertex struct {
 	ID          int
-	Value       float64
+	Value       interface{}
 	OutVertices []int
 	IncMsgs     []VertexMessage
 	Active      bool
@@ -44,7 +44,7 @@ func (v *BaseVertex) GetID() int {
 }
 
 // GetValue returns the value of the vertex.
-func (v *BaseVertex) GetValue() float64 {
+func (v *BaseVertex) GetValue() interface{} {
 	return v.Value
 }
 

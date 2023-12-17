@@ -10,7 +10,7 @@ package graph
 */
 type VertexMessage struct {
 	FromID    int
-	Value     float64
+	Value     interface{}
 	ToID      int
 	SuperStep int
 }
